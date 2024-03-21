@@ -1,6 +1,6 @@
 export type Article = {
   id?: string
-  label: string
+  title: string
   price: number
   tva: number
 }

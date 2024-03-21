@@ -22,13 +22,13 @@ import type { Article } from '@/types/Article.types.ts'
 
 const emits = defineEmits(['saveArticle'])
 
-const article: Ref<Array<Article>> = ref({
+const article: Ref<Article> = ref({
   title: '',
-  price: '',
-  tva: ''
-} as Article)
+  price: 0,
+  tva: 0,
+})
 
-function saveArticle(): Article {
+function saveArticle() {
   // Add your save logic here
   console.log('Article saved:', article.value)
   emits('saveArticle', article.value)

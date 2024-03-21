@@ -21,8 +21,8 @@ import ArticleForm from '@/components/ArticleForm.vue'
 import type { Article } from '@/types/Article.types'
 
 const articles: Ref<Array<Article>> = ref([
-  { title: 'Article 1', prix_unitaire: 20, tva: 20, id: '1' },
-  { title: 'Article 2', prix_unitaire: 30, tva: 20, id: '2' }
+  { title: 'Article 1', price: 20, tva: 20, id: '1' },
+  { title: 'Article 2', price: 30, tva: 20, id: '2' }
 ])
 
 const selectedArticle = ref<Article | null>(null)
