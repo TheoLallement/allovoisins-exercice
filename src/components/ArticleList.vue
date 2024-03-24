@@ -16,7 +16,7 @@ const props = defineProps({
 })
 </script>
 
-<style scoped scss>
+<style scoped lang="scss">
 .article-list {
   display: block;
   padding: 1rem;

@@ -51,7 +51,7 @@ function resetFormArticle() {
 }
 </script>
 
-<style scoped scss>
+<style scoped lang="scss">
 .articles-view {
   display: flex;
   justify-content: space-around;
@@ -68,6 +68,8 @@ function resetFormArticle() {
 .article-view--article-form {
   flex: 1;
   max-width: calc(30% - var(--primary-padding));
+  height: fit-content;
+  position: sticky;
+  top: 16px;
 }
 </style>
-```
