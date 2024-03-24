@@ -8,6 +8,6 @@ export type Article = {
 export const ArticleDefault: Article = {
   id: undefined,
   title: '',
-  price: 0,
+  price: NaN,
   tva: 20
 }

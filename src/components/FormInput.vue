@@ -2,10 +2,10 @@
   <div class="form-input--container">
     <input
       class="form-input--input"
-      v-bind="args"
       :type="props.type"
       :id="props.id"
-      v-model="inputValue"
+      :value="props.modelValue"
+      @input="emit('update:modelValue', $event.target.value)"
       required
     />
     <label class="form-input--label" :for="props.id">{{ label }}</label>
@@ -25,8 +25,14 @@ const props = defineProps({
   label: {
     type: String,
     required: true
+  },
+  modelValue: {
+    type: [String, Number],
+    required: true
   }
 })
+
+const emit = defineEmits(['update:modelValue'])
 
 const inputValue = defineModel()
 </script>
