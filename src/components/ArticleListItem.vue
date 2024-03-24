@@ -1,6 +1,7 @@
 <template>
-  <div role="button" @click="handleClick">
-    {{ props.article.title }}
+  <div class="article-list-item" role="button" @click="handleClick">
+    <span class="article-list-item--title">{{ props.article.title }}</span>
+    <span class="article-list-item--icon">></span>
   </div>
 </template>
 
@@ -25,3 +26,30 @@ function handleClick() {
   emits('selectArticle', props.article)
 }
 </script>
+
+<style scoped scss>
+.article-list-item {
+  width: 100%;
+  display: flex;
+  padding: var(--primary-padding) 0;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lightgray;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--gray-3); /* or any other border style */
+  }
+}
+
+.article-list-item--title {
+  flex-grow: 1;
+  padding-left: var(--primary-padding);
+}
+
+.article-list-item--icon {
+  font-size: 1rem;
+  margin-right: var(--primary-padding);
+}
+</style>
