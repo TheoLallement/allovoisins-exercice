@@ -1,6 +1,6 @@
 <template>
   <div class="articles-view">
-    <article-list title="Articles">
+    <article-list class="article-view--article-list" title="Articles">
       <article-list-item
         v-for="article in articles"
         :selected="article === formArticle"
@@ -10,13 +10,12 @@
       />
     </article-list>
     <article-form
+      class="article-view--article-form"
       :article="formArticle"
       @save-article="handleSaveArticle"
       @cancel-modification="resetFormArticle"
     />
   </div>
-  {{ formArticle }}
-  {{ ArticleDefault }}
 </template>
 
 <script setup lang="ts">
@@ -55,8 +54,20 @@ function resetFormArticle() {
 <style scoped scss>
 .articles-view {
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: row wrap;
   gap: 2rem;
+  width: 100%;
+}
+
+.article-view--article-list {
+  flex: 1;
+  max-width: calc(70% - var(--primary-padding));
+}
+
+.article-view--article-form {
+  flex: 1;
+  max-width: calc(30% - var(--primary-padding));
 }
 </style>
 ```

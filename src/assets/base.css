@@ -1,61 +1,42 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  /* COLORS */
+  /* demande */
+  --primary-demande: #87db78;
+  --primary-demande-lighten: #daffd3;
+  --primary-demande-darken: #66af59;
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  /* offre */
+  --primary-offre: #ff3c74;
+  --primary-offre-lighten: #ffd9e4;
+  --primary-offre-darken: #d82e5f;
 
-  --vt-c-indigo: #2c3e50;
+  /* profil */
+  --primary-profil: #44b7fb;
+  --primary-profil-lighten: #d6f0ff;
+  --primary-profil-darken: #278fcd;
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --main-dark: #151f2a;
+  --main-light: #404d5c;
+  --main-gray: #727f8f;
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --gray-1: #f5faff;
+  --gray-2: #d5dde5;
+  --gray-3: #b8c1cc;
+  --gray-4: #9ba6b2;
+
+  --background-color: var(--primary-profil-lighten);
+
+  --primary-padding: 16px;
 }
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
+  --color-background: var(--background-color);
 
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  --color-text: var(--main-dark);
 
   --section-gap: 160px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-  }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
 }
 
 body {
@@ -67,6 +48,7 @@ body {
     background-color 0.5s;
   line-height: 1.6;
   font-family:
+    'TTChocolates',
     Inter,
     -apple-system,
     BlinkMacSystemFont,
@@ -83,4 +65,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2 {
+  font-family: 'TTChocolatesBold';
 }

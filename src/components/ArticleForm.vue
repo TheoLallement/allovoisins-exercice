@@ -5,8 +5,8 @@
       @submit.prevent="saveArticle"
       @reset.prevent="cancelModification"
     >
-      <h3 v-if="isModifyMode">Modification de {{ articleRef.title }}</h3>
-      <h3 v-else>Ajout d'un article</h3>
+      <h2 v-if="isModifyMode">Modification de {{ articleRef.title }}</h2>
+      <h2 v-else>Ajout d'un article</h2>
       <label for="title">Title:</label>
       <input type="text" id="title" v-model="articleRef.title" required />
 
@@ -16,17 +16,16 @@
       <label for="tva">TVA:</label>
       <input type="number" id="tva" v-model="articleRef.tva" required />
 
-      <button type="submit">Save</button>
-      <button type="reset">Annuler</button>
+      <div class="article-form--buttons-container">
+        <button type="submit">Save</button>
+        <button type="reset">Annuler</button>
+      </div>
     </form>
-    {{ isModifyMode }}
-    {{ articleRef }}
-    {{ props.article }}
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, computed, watch, reactive, toRef, type Ref, type PropType } from 'vue'
+import { computed, type PropType } from 'vue'
 import type { Article } from '@/types/Article.types.ts'
 
 const props = defineProps({
@@ -54,10 +53,9 @@ function cancelModification() {
 
 <style scoped scss>
 .article-form {
-  width: 100%;
   display: block;
   padding: 1rem;
-  background-color: grey;
+  background-color: white;
   border-radius: 16px;
 }
 
@@ -65,5 +63,11 @@ function cancelModification() {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.article-form--buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--primary-padding);
 }
 </style>

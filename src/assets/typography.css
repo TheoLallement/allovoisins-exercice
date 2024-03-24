@@ -1,0 +1,20 @@
+/* Regular */
+@font-face {
+  font-family: 'TTChocolates';
+  src: url('./typography/tt_chocolates/tt_chocolates_medium.otf') format('opentype');
+  /* Additional font properties like font-weight, font-style, etc. can be specified here if needed */
+}
+
+/* Bold */
+@font-face {
+  font-family: 'TTChocolatesBold';
+  src: url('./typography/tt_chocolates/tt_chocolates_bold.otf') format('opentype');
+  /* Additional font properties */
+}
+
+/* Demi-Bold */
+@font-face {
+  font-family: 'TTChocolatesDemiBold';
+  src: url('./typography/tt_chocolates/tt_chocolates_demibold.otf') format('opentype');
+  /* Additional font properties */
+}
