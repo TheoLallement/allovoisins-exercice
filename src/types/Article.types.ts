@@ -4,3 +4,10 @@ export type Article = {
   price: number
   tva: number
 }
+
+export const ArticleDefault: Article = {
+  id: undefined,
+  title: '',
+  price: 0,
+  tva: 20
+}
