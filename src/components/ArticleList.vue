@@ -18,16 +18,15 @@ const props = defineProps({
 
 <style scoped scss>
 .article-list {
-  width: 100%;
   display: block;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 16px;
 }
 
 .article-list--items {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
 
   &:hover {
     cursor: pointer;
@@ -35,7 +34,6 @@ const props = defineProps({
 }
 
 .article-list--title {
-  font-size: 2rem;
   margin-bottom: 1rem;
 }
 </style>
