@@ -46,6 +46,7 @@ const articleRef = computed(() => {
 const isModifyMode = computed(() => articleRef.value.id)
 
 const totalTTC = computed(() => {
+  if (isNaN(articleRef.value.price) || isNaN(articleRef.value.tva)) return '0'
   return String(articleRef.value.price * (1 + articleRef.value.tva / 100))
 })
 
