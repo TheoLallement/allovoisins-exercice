@@ -27,7 +27,7 @@ function handleClick() {
 }
 </script>
 
-<style scoped scss>
+<style scoped lang="scss">
 .article-list-item {
   width: 100%;
   display: flex;
