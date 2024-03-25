@@ -25,5 +25,14 @@ const props = defineProps({
   color: white;
   background-color: var(--primary-offre);
   border: unset;
+
+  &:hover {
+    background-color: var(--primary-offre-darken);
+  }
+
+  &:focus-visible {
+    outline: var(--primary-offre) solid 2px;
+    outline-offset: 3px;
+  }
 }
 </style>

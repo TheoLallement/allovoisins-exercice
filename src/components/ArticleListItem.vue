@@ -1,5 +1,11 @@
 <template>
-  <div class="article-list-item" role="button" @click="handleClick">
+  <div
+    class="article-list-item"
+    role="button"
+    tabindex="0"
+    @keypress="handleClick"
+    @click="handleClick"
+  >
     <span class="article-list-item--title">{{ props.article.title }}</span>
     <span class="article-list-item--icon">></span>
   </div>
@@ -35,11 +41,15 @@ function handleClick() {
 
   &:hover {
     cursor: pointer;
-    background-color: lightgray;
+    background-color: var(--gray-2);
   }
 
   &:not(:last-child) {
     border-bottom: 1px solid var(--gray-3); /* or any other border style */
+  }
+
+  &:focus-visible {
+    outline: var(--main-gray) solid 2px;
   }
 }
 
