@@ -1,6 +1,6 @@
 <template>
   <div class="articles-view">
-    <article-list class="article-view--article-list" title="Articles">
+    <article-list class="article-view--article-list" title="Mes articles">
       <article-list-item
         v-for="article in articles"
         :selected="article === formArticle"
@@ -91,14 +91,14 @@ function setSelectedArticle(article: Article) {
 }
 
 .article-view--article-list {
-  flex-grow: 7;
+  flex-grow: 1;
 }
 
 .article-view--article-form {
-  flex-grow: 2;
   height: fit-content;
   position: sticky;
   top: 16px;
+  flex-basis: 30%;
 }
 
 .article-view--add-button-mobile {
@@ -114,5 +114,14 @@ function setSelectedArticle(article: Article) {
   justify-content: center;
   border: unset;
   background-color: var(--primary-offre);
+
+  &:hover {
+    background-color: var(--primary-offre-darken);
+  }
+
+  &:focus-visible {
+    outline: var(--primary-offre) solid 2px;
+    outline-offset: 3px;
+  }
 }
 </style>

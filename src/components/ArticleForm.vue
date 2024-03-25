@@ -5,8 +5,8 @@
       @submit.prevent="saveArticle"
       @reset.prevent="cancelModification"
     >
-      <h2 v-if="isModifyMode">Modification de {{ articleRef.title }}</h2>
-      <h2 v-else>Ajout d'un article</h2>
+      <h2 v-if="isModifyMode">Modifier : {{ articleRef.title }}</h2>
+      <h2 v-else>Ajouter un article</h2>
 
       <form-input id="title" label="Titre" v-model="articleRef.title" />
 
