@@ -56,7 +56,6 @@ const submitButtonLabel = computed(() => {
 })
 
 function saveArticle() {
-  console.log('Article saved:', articleRef)
   emits('saveArticle', articleRef.value)
 }
 
@@ -87,5 +86,11 @@ function cancelModification() {
 
 .article-form--total-ttc {
   font-size: 1.25rem;
+}
+
+.article-form--buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--primary-padding);
 }
 </style>

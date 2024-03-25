@@ -42,7 +42,7 @@ import ArticleList from '@/components/ArticleList.vue'
 import ArticleListItem from '@/components/ArticleListItem.vue'
 import ArticleForm from '@/components/ArticleForm.vue'
 import { type Article, ArticleDefault } from '@/types/Article.types'
-import useBreakpoints from '@/composables/useBreakpoints.ts'
+import useBreakpoints from '@/composables/useBreakpoints'
 
 const articles: Ref<Array<Article>> = ref([
   { title: 'Article 1', price: 20, tva: 20, id: '1' },
@@ -71,7 +71,6 @@ function handleSaveArticle(article: Article) {
 
 function resetFormArticle() {
   // need to destructure to not modify original object
-  console.log(ArticleDefault)
   formArticle.value = { ...ArticleDefault }
   if (isMobile.value) dialog.value?.close()
 }
