@@ -2,7 +2,6 @@
   <div class="form-input--container">
     <input
       class="form-input--input"
-      v-bind="args"
       :type="props.type"
       :id="props.id"
       v-model="inputValue"
