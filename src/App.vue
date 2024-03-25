@@ -3,6 +3,14 @@ import ArticlesView from './views/ArticlesView.vue'
 </script>
 
 <template>
+  <h2>
+    Retrouver le README.md avec le résumé du déroulé de l'exercice
+    <a
+      target="_blank"
+      href="https://github.com/TheoLallement/allovoisins-exercice/blob/main/README.md"
+      >ici</a
+    >
+  </h2>
   <ArticlesView />
 </template>
 
